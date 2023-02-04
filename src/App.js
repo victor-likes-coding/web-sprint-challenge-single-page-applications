@@ -6,6 +6,9 @@ const App = () => {
     return (
         <>
             <Header />
+            <Switch>
+                <Route path="/" exact></Route>
+            </Switch>
         </>
     );
 };
