@@ -1,0 +1,20 @@
+.header {
+    &--flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        &--main {
+            color: red;
+        }
+    }
+
+    &__nav {
+        &--flex {
+            display: flex;
+        }
+
+        &-link {
+        }
+    }
+}
