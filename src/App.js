@@ -1,11 +1,12 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
 
 const App = () => {
-  return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
-  );
+    return (
+        <>
+            <Header />
+        </>
+    );
 };
 export default App;
