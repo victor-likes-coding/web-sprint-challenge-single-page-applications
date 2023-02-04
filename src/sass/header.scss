@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .header {
     padding: 1.6rem 4.8rem;
     &--flex {
@@ -6,7 +8,12 @@
     }
     &__title {
         &--main {
-            color: red;
+            color: $red;
+            font-size: 2rem;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -23,10 +30,10 @@
             font-size: 1.2rem;
             border: 2px solid #000;
             text-decoration: none;
-            color: black;
+            color: $red;
             cursor: pointer;
             &.active {
-                background-color: black;
+                background-color: $red;
                 color: white;
             }
         }
