@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = (props) => {
     return (
@@ -8,7 +9,9 @@ const Banner = (props) => {
                     <h2 className="header__subheader">Your favorite food, delivered while coding</h2>
                 </div>
             </div>
-            <div className="banner__cta">Pizza?</div>
+            <Link to="/pizza" className="banner__cta" id="#order-pizza">
+                Pizza?
+            </Link>
         </div>
     );
 };
