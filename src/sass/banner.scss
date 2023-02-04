@@ -1,0 +1,42 @@
+@use "variables" as *;
+
+.banner {
+    background-image: url("../../Assets/Pizza.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vh - 58px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: calc(100vh - 58px);
+        background-color: rgba(199, 199, 199, 0.2);
+        backdrop-filter: blur(2px);
+    }
+    &__cta {
+        position: absolute;
+        width: 10%;
+        background-color: $red;
+        color: white;
+        font-weight: bold;
+        font-size: 2rem;
+        // border: 1px solid #000;
+        top: 66%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.2rem 8rem;
+        cursor: pointer;
+    }
+
+    &__subheader {
+        font-size: 2rem;
+        position: relative;
+    }
+}
