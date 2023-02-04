@@ -30,10 +30,10 @@ Commit your code regularly and meaningfully. This helps you in case you ever nee
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Clone your OWN version of the repository (Not BloomTech's by mistake!)
-- [ ] Implement the project on the main branch, committing changes regularly
-- [ ] Push commits: `git push origin main`
+- [x] Create a forked copy of this project
+- [x] Clone your OWN version of the repository (Not BloomTech's by mistake!)
+- [x] Implement the project on the main branch, committing changes regularly
+- [x] Push commits: `git push origin main`
 
 ### Task 2: Project Requirements
 
@@ -79,7 +79,7 @@ From there in your newly created `cypress` folder in VSCode, navigate to the `e2
 
 Follow these steps for completing your project.
 
-Set up your fork on Github to codegrade following the instructions [here](https://bloomtech-1.wistia.com/medias/mpf3xru99v), pushing commits to your main branch. At this point you should be complete with your sprint challenge requirements!  
+Set up your fork on Github to codegrade following the instructions [here](https://bloomtech-1.wistia.com/medias/mpf3xru99v), pushing commits to your main branch. At this point you should be complete with your sprint challenge requirements!
 
 ### Task 3: Stretch Goals
 
