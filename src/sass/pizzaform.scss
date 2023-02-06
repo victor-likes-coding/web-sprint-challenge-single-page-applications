@@ -108,6 +108,12 @@
     margin: 0 auto;
 }
 
+.errors {
+    width: 100%;
+    margin-bottom: 1.2rem;
+    color: $red;
+}
+
 .boolean-switch {
     position: relative;
     display: inline-block;

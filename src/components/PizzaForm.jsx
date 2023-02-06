@@ -185,7 +185,7 @@ const PizzaForm = (props) => {
                         name="name"
                         onChange={onChangeHandler}
                     />
-                    <span className="">{errors.name}</span>
+                    <span className="errors">{errors.name}</span>
                     <input
                         type="number"
                         name="quanity"
