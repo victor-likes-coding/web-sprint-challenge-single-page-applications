@@ -9,7 +9,10 @@ const Banner = (props) => {
                     <h2 className="header__subheader">Your favorite food, delivered while coding</h2>
                 </div>
             </div>
-            <Link to="/pizza" className="banner__cta" id="#order-pizza">
+            <Link
+                to="/pizza"
+                className="banner__cta"
+                id="order-pizza">
                 Pizza?
             </Link>
         </div>

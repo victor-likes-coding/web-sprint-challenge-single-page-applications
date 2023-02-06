@@ -1,0 +1,25 @@
+export const options = {
+    size: {
+        small: '12"',
+        medium: '14"',
+        large: '16"',
+        "extra-large": '18"',
+    },
+    sauce: ["Original Red", "Garlic Ranch", "BBQ Sauce", "Spinach Alfredo"],
+    topings: [
+        "Pepperoni",
+        "Diced Tomatoes",
+        "Susauge",
+        "Black Olives",
+        "Canadian Bacon",
+        "Roasted Garlic",
+        "Spicy Italian Sausage",
+        "Artichoke Hearts",
+        "Grilled Chicken",
+        "Three Cheese",
+        "Onions",
+        "Pineapple",
+        "Green Pepper",
+        "Extra Cheese",
+    ],
+};
