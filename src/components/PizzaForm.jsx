@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import PizzaFormGroup from "./PizzaFormGroup";
 import { options } from "../data/pizza";
 import axios from "axios";
+import * as Yup from "yup";
+
+const schemaValidation = Yup.object().shape({
+    name: Yup.string().min(2, "name must be at least 2 characters").required("name is required for order to proceed"),
+    // required isn't required for checkboxes.
+});
 
 const PizzaForm = (props) => {
     const [formState, setFormState] = useState({
@@ -15,6 +21,10 @@ const PizzaForm = (props) => {
         price: 17.99,
     });
 
+    const [errors, setErrors] = useState({
+        name: "",
+    });
+
     const submitHandler = (event) => {
         event.preventDefault();
         (async () => {
@@ -25,6 +35,24 @@ const PizzaForm = (props) => {
     const onChangeHandler = (event) => {
         switch (event.target.name) {
             // works
+            case "name":
+                Yup.reach(schemaValidation, event.target.name)
+                    .validate(event.target.value)
+                    .then((valid) => {
+                        console.log("no error");
+                        setErrors({
+                            ...errors,
+                            [event.target.name]: "",
+                        });
+                    })
+                    .catch(({ errors }) => {
+                        setErrors({
+                            ...errors,
+                            [event.target.name]: errors[0],
+                        });
+                    });
+                setFormState({ ...formState, [event.target.name]: event.target.value });
+                break;
             case "toppings":
                 if (formState.toppings.includes(event.target.value)) {
                     setFormState({ ...formState, [event.target.name]: formState.toppings.filter((topping) => topping !== event.target.value) });
@@ -75,7 +103,7 @@ const PizzaForm = (props) => {
                     type="checkbox"
                     name="toppings"
                     value={topping}
-                    checked={formState.toppings.includes(topping)}
+                    defaultChecked={formState.toppings.includes(topping)}
                     onChange={onChangeHandler}
                 />
                 {topping}
@@ -89,7 +117,8 @@ const PizzaForm = (props) => {
             <div className="pizza-form__banner"></div>
             <form
                 className="pizza-form"
-                id="pizza-form">
+                id="pizza-form"
+                onSubmit={submitHandler}>
                 <h3 className="pizza-form__form-header">Build Your Own Pizza</h3>
                 <PizzaFormGroup
                     title="Choice of Size"
@@ -156,6 +185,7 @@ const PizzaForm = (props) => {
                         name="name"
                         onChange={onChangeHandler}
                     />
+                    <span className="">{errors.name}</span>
                     <input
                         type="number"
                         name="quanity"
